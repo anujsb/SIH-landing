@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { cn } from "../lib/utils";
 const Hero = () => {
@@ -98,7 +98,7 @@ const Pattern = ({
           key={`matrix-row-${rowIdx}`}
           className="flex flex-col  relative z-20 border-b"
         >
-          {row.map((column, colIdx) => {
+          {row.map((_, colIdx) => {
             const controls = useAnimation();
 
             useEffect(() => {
