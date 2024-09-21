@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { cn } from "../lib/utils";
+import { Button } from "./ui/button";
 const Hero = () => {
   return (
     <div>
@@ -8,14 +9,11 @@ const Hero = () => {
         <BackgroundCellCore />
         <div className="relative z-50  pointer-events-none select-none text-center">
           <h1 className="md:text-2xl lg:text-7xl font-medium text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-900 to-neutral-500 pointer-events-none mt-28">
-            Nyay-Sarthi
+            Nyay Sutra 
           </h1>
-          <p className="text-neutral-700 my-5">
-            transforms vast video libraries into instantly searchable,
-            actionable insights —no manual tagging required.
-          </p>
+          <p className="text-neutral-700 my-5">details</p>
           <div className="my-10 flex items-center justify-center gap-4">
-            <button>Book a Demo</button>
+            <Button className="text-white" variant="default">Book a Demo</Button>
             <p className="text-neutral-600">
               5,000 people like you <br /> have purchased this product!
             </p>
