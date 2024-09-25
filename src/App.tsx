@@ -10,36 +10,45 @@ import Team from "./components/Team";
 
 function App() {
   return (
-    <BrowserRouter>
-      <FloatingNavDemo />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <div>
-              <Hero />
-              <Features />
-              <Footer />
-            </div>
-          }
-        />
-        <Route path="/about" element={<About />} />
-        <Route path="/demo" element={<Demo />} />
-        <Route path="/team" element={<Team />} />
-      </Routes>
-    </BrowserRouter>
+    <div className="">
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <div>
+                <FloatingNavDemo />
+                <Hero />
+                <Features />
+                <Footer />
+              </div>
+            }
+          />
+          <Route
+            path="/about"
+            element={
+              <div>
+                <FloatingNavDemo />
+                <About />
+                <Footer />
+              </div>
+            }
+          />
+          <Route path="/demo" element={<Demo />} />
+          <Route
+            path="/team"
+            element={
+              <div>
+                <FloatingNavDemo />
+                <Team />
+                <Footer />
+              </div>
+            }
+          />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 
 export default App;
-
-// <BrowserRouter className="">
-//       <Header />
-//       <Routes>
-//         <Route path="/" element={<Home />} />
-//         <Route path="/SignIn" element={<SignIn />} />
-//         <Route path="/SignUp" element={<SignUp />} />
-//         <Route path="/Profile" element={<Profile />} />
-//         <Route path="/About" element={<About />} />
-//       </Routes>
-//     </BrowserRouter>

@@ -8,8 +8,8 @@ const Hero = () => {
     <div>
       <div className="relative h-screen w-full bg-white flex justify-center items-center overflow-hidden">
         <BackgroundCellCore />
-        <div className="relative z-50  pointer-events-none select-none text-center mx-2">
-          <h1 className="md:text-2xl lg:text-7xl font-medium text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-900 to-neutral-500 pointer-events-none mt-28">
+        <div className="relative z-50  pointer-events-none select-none text-center ">
+          <h1 className="md:text-2xl lg:text-7xl font-medium text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-900 to-neutral-500 pointer-events-none mt-16">
             Nyay Sutra
           </h1>
           <p className="text-neutral-700 my-5 text-2xl">
@@ -23,7 +23,7 @@ const Hero = () => {
               className="text-white pointer-events-auto"
               variant="default"
             >
-              Demo
+              View Demo
             </Button>
             {/* <p className="text-neutral-600">
               5,000 people like you <br /> have purchased this product!

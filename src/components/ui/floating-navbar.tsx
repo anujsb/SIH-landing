@@ -51,7 +51,7 @@ export const FloatingNav: React.FC<FloatingNavProps> = ({
 
   return (
     <AnimatePresence mode="wait">
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center ">
         <motion.div
           initial={{ opacity: 1, y: -100 }}
           animate={{ y: visible ? 0 : -100, opacity: visible ? 1 : 0 }}
