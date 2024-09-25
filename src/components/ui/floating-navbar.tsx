@@ -73,9 +73,11 @@ export const FloatingNav: React.FC<FloatingNavProps> = ({
               </Link>
             ))}
           </div>
-          <Button className="mx-4 black-grad-radial shadow-inner border rounded-lg text-white">
-            Start Free Trial
-          </Button>
+          <Link to='/demo'>
+            <Button className="mx-4 black-grad-radial shadow-inner border rounded-lg text-white">
+              view Demo
+            </Button>
+          </Link>
           <Button
             data-collapse-toggle="floating-navbar"
             type="button"
