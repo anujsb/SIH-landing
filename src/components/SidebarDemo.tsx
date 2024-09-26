@@ -10,23 +10,24 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 // import { cn } from "../lib/utils";
 import { logo } from "../assets";
+import { Dashboard } from "../assets";
 
 export function SidebarDemo() {
   const links = [
     {
       label: "Dashboard",
       href: "/demo",
-      icon: <img src={logo} alt="EACC.dev logo" className="h-10 w-30 mr-2 " />,
+      icon: <img src={Dashboard} alt="EACC.dev logo" className="h-10 w-30 mr-2 " />,
     },
     {
-      label: "Dashboard",
+      label: "?",
       href: "/demo",
-      icon: <img src={logo} alt="EACC.dev logo" className="h-10 w-30 mr-2 " />,
+      icon: <img src={Dashboard} alt="EACC.dev logo" className="h-10 w-30 mr-2 " />,
     },
     {
-      label: "Dashboard",
+      label: "??",
       href: "/demo",
-      icon: <img src={logo} alt="EACC.dev logo" className="h-10 w-30 mr-2 " />,
+      icon: <img src={Dashboard} alt="EACC.dev logo" className="h-10 w-30 mr-2 " />,
     },
     // {
     //   label: "Logout",

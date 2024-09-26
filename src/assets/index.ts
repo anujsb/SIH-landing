@@ -5,8 +5,10 @@ import DevTools from "./DevTools.svg";
 import KeyFeatures from "./KeyFeatures.svg";
 import linkedin from "./linkedin.svg";
 import logo from "./logo.png";
-
-
+import attach from "./attach.svg";
+import arrow from "./arrow.svg";
+import filter from "./filter.svg";
+import Dashboard from "./Dashboard.svg";
 
 export {
   ai,
@@ -16,4 +18,8 @@ export {
   KeyFeatures,
   linkedin,
   logo,
+  attach,
+  arrow,
+  filter,
+  Dashboard,
 };

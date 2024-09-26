@@ -3,7 +3,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { cn } from "../../lib/utils";
-
+import { filter, attach } from "../../assets";
 export function PlaceholdersAndVanishInput({
   placeholders,
   onChange,
@@ -175,102 +175,144 @@ export function PlaceholdersAndVanishInput({
     onSubmit && onSubmit(e);
   };
   return (
-    <form
+    <div
       className={cn(
-        "w-full relative max-w-xl mx-auto bg-[#393937] h-12 rounded-xl overflow-hidden shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),_0px_1px_0px_0px_rgba(25,28,33,0.02),_0px_0px_0px_1px_rgba(25,28,33,0.08)] transition duration-200",
+        "w-full relative max-w-xl mx-auto bg-[#393937] rounded-xl overflow-hidden shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),_0px_1px_0px_0px_rgba(25,28,33,0.02),_0px_0px_0px_1px_rgba(25,28,33,0.08)] transition duration-200",
         value && "bg-[#212120]"
       )}
-      onSubmit={handleSubmit}
     >
-      <canvas
+      <form
         className={cn(
-          "absolute pointer-events-none  text-base transform scale-50 top-[20%] left-2 sm:left-8 origin-top-left filter invert dark:invert-0 pr-20",
-          !animating ? "opacity-0" : "opacity-100"
+          "w-full relative max-w-xl mx-auto bg-[#393937] h-12 rounded-xl overflow-hidden transition duration-200",
+          value && "bg-[#212120]"
         )}
-        ref={canvasRef}
-      />
-      <input
-        onChange={(e) => {
-          if (!animating) {
-            setValue(e.target.value);
-            onChange && onChange(e);
-          }
-        }}
-        onKeyDown={handleKeyDown}
-        ref={inputRef}
-        value={value}
-        type="text"
-        className={cn(
-          "w-full relative text-sm sm:text-base z-50 border-none dark:text-white bg-transparent text-black h-full rounded-full focus:outline-none focus:ring-0 pl-4 sm:pl-10 pr-20",
-          animating && "text-transparent dark:text-transparent"
-        )}
-      />
-
-      <button
-        disabled={!value}
-        type="submit"
-        className="absolute right-2 top-1/2 z-50 -translate-y-1/2 h-8 w-8 rounded-full disabled:bg-gray-100 bg-black dark:bg-zinc-900 dark:disabled:bg-zinc-800 transition duration-200 flex items-center justify-center"
+        onSubmit={handleSubmit}
       >
-        <motion.svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="text-gray-300 h-4 w-4"
+        <canvas
+          className={cn(
+            "absolute pointer-events-none  text-base transform scale-50 top-[20%] left-2 sm:left-8 origin-top-left filter invert dark:invert-0 pr-20",
+            !animating ? "opacity-0" : "opacity-100"
+          )}
+          ref={canvasRef}
+        />
+        <input
+          aria-label="Input field for text"
+          onChange={(e) => {
+            if (!animating) {
+              setValue(e.target.value);
+              onChange && onChange(e);
+            }
+          }}
+          onKeyDown={handleKeyDown}
+          ref={inputRef}
+          value={value}
+          type="text"
+          className={cn(
+            "w-full relative text-sm sm:text-base z-50 border-none text-white bg-transparent  h-full rounded-full focus:outline-none focus:ring-0 pl-4 sm:pl-10 pr-20",
+            animating && "text-transparent dark:text-transparent"
+          )}
+        />
+        <button
+          aria-label="Submit"
+          disabled={!value}
+          type="submit"
+          className="absolute right-2 top-1/2 z-50 -translate-y-1/2 h-8 w-8 rounded-full disabled:bg-gray-100 bg-black dark:bg-zinc-900 dark:disabled:bg-zinc-800 transition duration-200 flex items-center justify-center"
         >
-          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-          <motion.path
-            d="M5 12l14 0"
-            initial={{
-              strokeDasharray: "50%",
-              strokeDashoffset: "50%",
-            }}
-            animate={{
-              strokeDashoffset: value ? 0 : "50%",
-            }}
-            transition={{
-              duration: 0.3,
-              ease: "linear",
-            }}
-          />
-          <path d="M13 18l6 -6" />
-          <path d="M13 6l6 6" />
-        </motion.svg>
-      </button>
-
-      <div className="absolute inset-0 flex items-center rounded-full pointer-events-none">
-        <AnimatePresence mode="wait">
-          {!value && (
-            <motion.p
+          {/* <img
+            src={arrow}
+            width={50}
+            height={50}
+            alt="EACC.dev logo"
+            className="rounded-xl mx-auto lg:mx-0"
+          /> */}
+          <motion.svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="text-white h-4 w-4"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <motion.path
+              d="M5 12l14 0"
               initial={{
-                y: 5,
-                opacity: 0,
+                strokeDasharray: "50%",
+                strokeDashoffset: "50%",
               }}
-              key={`current-placeholder-${currentPlaceholder}`}
               animate={{
-                y: 0,
-                opacity: 1,
-              }}
-              exit={{
-                y: -15,
-                opacity: 0,
+                strokeDashoffset: value ? 0 : "50%",
               }}
               transition={{
                 duration: 0.3,
                 ease: "linear",
               }}
-              className="dark:text-zinc-500 text-sm sm:text-base font-normal text-neutral-500 pl-4 sm:pl-12 text-left w-[calc(100%-2rem)] truncate"
-            >
-              {placeholders[currentPlaceholder]}
-            </motion.p>
-          )}
-        </AnimatePresence>
+            />
+            <path d="M13 18l6 -6" />
+            <path d="M13 6l6 6" />
+          </motion.svg>
+        </button>
+
+        <div className="absolute inset-0 flex items-center rounded-full pointer-events-none">
+          <AnimatePresence mode="wait">
+            {!value && (
+              <motion.p
+                initial={{
+                  y: 5,
+                  opacity: 0,
+                }}
+                key={`current-placeholder-${currentPlaceholder}`}
+                animate={{
+                  y: 0,
+                  opacity: 1,
+                }}
+                exit={{
+                  y: -15,
+                  opacity: 0,
+                }}
+                transition={{
+                  duration: 0.3,
+                  ease: "linear",
+                }}
+                className="text-sm sm:text-base font-normal text-neutral-500 pl-4 sm:pl-12 text-left w-[calc(100%-2rem)] truncate"
+              >
+                {placeholders[currentPlaceholder]}
+              </motion.p>
+            )}
+          </AnimatePresence>
+        </div>
+      </form>
+      <div
+        className={cn(
+          "w-full flex gap-4 items-start justify-start relative bg-[#393937] p-4",
+          value && "bg-[#212120]"
+        )}
+      >
+        <div className="relative text-sm sm:text-base z-50 border-none text-neutral-500 flex gap-1">
+          <img
+            src={filter}
+            width={20}
+            height={20}
+            alt="EACC.dev logo"
+            className="rounded-xl mx-auto lg:mx-0"
+          />
+          <p>Filter</p>
+        </div>
+        <div className=" relative text-sm sm:text-base z-50 border-none text-neutral-500 flex gap-1">
+          <img
+            src={attach}
+            width={20}
+            height={20}
+            alt="EACC.dev logo"
+            className="rounded-xl mx-auto lg:mx-0"
+          />
+          <p>attach</p>
+        </div>
       </div>
-    </form>
+    </div>
   );
 }
