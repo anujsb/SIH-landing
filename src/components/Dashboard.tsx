@@ -39,7 +39,7 @@ const Dashboard = () => {
           />
         </div>
         <div className=" m-4 w-full">
-          <BentoGrid className="max-w-4xl mt-10">
+          <BentoGrid className="mt-10">
             {items.map((item, i) => (
               <BentoGridItem
                 key={i}
