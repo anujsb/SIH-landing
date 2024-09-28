@@ -177,7 +177,7 @@ export function PlaceholdersAndVanishInput({
   return (
     <div
       className={cn(
-        "w-full relative max-w-xl mx-auto bg-[#393937] rounded-xl overflow-hidden shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),_0px_1px_0px_0px_rgba(25,28,33,0.02),_0px_0px_0px_1px_rgba(25,28,33,0.08)] transition duration-200",
+        "w-full relative max-w-xl mx-auto bg-[#393937] rounded-xl overflow-hidden shadow-[0px_4px_6px_-1px_rgba(0,0,0,0.1),_0px_1px_0px_0px_rgba(25,28,33,0.02),_0px_0px_0px_1px_rgba(25,28,33,0.08)] transition duration-200",
         value && "bg-[#212120]"
       )}
     >
@@ -216,26 +216,19 @@ export function PlaceholdersAndVanishInput({
           aria-label="Submit"
           disabled={!value}
           type="submit"
-          className="absolute right-2 top-1/2 z-50 -translate-y-1/2 h-8 w-8 rounded-full disabled:bg-gray-100 bg-black dark:bg-zinc-900 dark:disabled:bg-zinc-800 transition duration-200 flex items-center justify-center"
+          className="absolute right-2 top-1/2 z-50 -translate-y-1/2 rounded-full bg-zinc-900 disabled:bg-zinc-800 transition duration-200"
         >
-          {/* <img
-            src={arrow}
-            width={50}
-            height={50}
-            alt="EACC.dev logo"
-            className="rounded-xl mx-auto lg:mx-0"
-          /> */}
           <motion.svg
             xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
+            width="34"
+            height="34"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="text-white h-4 w-4"
+            className="text-white h-5 w-5"
           >
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
             <motion.path
@@ -288,7 +281,7 @@ export function PlaceholdersAndVanishInput({
       </form>
       <div
         className={cn(
-          "w-full flex gap-4 items-start justify-start relative bg-[#393937] p-4",
+          "w-full flex gap-4 items-start justify-start relative bg-[#393937] p-4 transition duration-200",
           value && "bg-[#212120]"
         )}
       >

@@ -74,7 +74,7 @@ export const FloatingNav: React.FC<FloatingNavProps> = ({
             ))}
           </div>
           <Link to='/demo'>
-            <Button className="mx-4 black-grad-radial shadow-inner border rounded-lg text-white">
+            <Button className="mx-4 black-grad-radial shadow-inner border rounded-lg text-white bg-black">
               view Demo
             </Button>
           </Link>

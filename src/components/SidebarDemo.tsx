@@ -39,7 +39,7 @@ export function SidebarDemo() {
   return (
     <div>
       <Sidebar open={open} setOpen={setOpen}>
-        <SidebarBody className="justify-between gap-10 bg-[#22211d] border-r border-neutral-500 shadow-2xl rounded-r-xl">
+        <SidebarBody className="justify-between gap-10 bg-neutral-200 border-r border-neutral-500 shadow-2xl rounded-r-xl">
           <div className="flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
             {open ? <Logo /> : <LogoIcon />}
             <div className="mt-8 flex flex-col gap-2">
@@ -81,7 +81,7 @@ export const Logo = () => {
       <motion.span
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="font-medium text-white text-3xl"
+        className="font-medium text-black text-3xl"
       >
         Nyay Sutra
       </motion.span>

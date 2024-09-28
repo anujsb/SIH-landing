@@ -20,7 +20,7 @@ const Hero = () => {
             className="my-10 flex items-center justify-center gap-4"
           >
             <Button
-              className="text-white pointer-events-auto"
+              className="text-white bg-black pointer-events-auto"
               variant="default"
             >
               View Demo
