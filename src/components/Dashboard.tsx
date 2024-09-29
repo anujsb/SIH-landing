@@ -3,41 +3,14 @@ import { SidebarDemo } from "./SidebarDemo";
 // import { cn } from "../lib/utils";
 import { BentoGrid, BentoGridItem } from "./ui/bento-grid";
 
-import { PlaceholdersAndVanishInput } from "./ui/placeholders-and-vanish-input";
-
 const Dashboard = () => {
-  const placeholders = [
-    "What's the first rule of Fight Club?",
-    "Who is Tyler Durden?",
-    "Where is Andrew Laeddis Hiding?",
-    "Write a Javascript method to reverse a string",
-    "How to assemble your own PC?",
-  ];
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    console.log(e.target.value);
-  };
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log("submitted");
-  };
 
   return (
-    <div className="bg-[#fafafa] text-black flex md:flex-row  w-full h-full">
+    <div className="bg-[#faf9f8] text-black flex md:flex-row  w-full min-h-screen">
       {" "}
-      {/* <Sidebar /> */}
       <SidebarDemo />
-      <div className="flex flex-1 flex-col items-center justify-center w-full">
-        <div className="h-[40rem] flex flex-1 flex-col items-center  px-4 bg-background mt-20 w-full">
-          <h1 className="mb-5 sm:mb-10 text-xl text-center sm:text-xl text-black ">
-            Where knowledge begins
-          </h1>
-          <PlaceholdersAndVanishInput
-            placeholders={placeholders}
-            onChange={handleChange}
-            onSubmit={onSubmit}
-          />
-        </div>
+      <div className="flex flex-1 flex-col w-full">
         <div className=" m-4 w-full">
           <BentoGrid className="mt-10">
             {items.map((item, i) => (

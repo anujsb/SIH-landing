@@ -7,6 +7,8 @@ import Hero from "./components/Hero";
 import { FloatingNavDemo } from "./components/Navbar";
 import { BrowserRouter, Routes, Route } from "react-router-dom"; // Import BrowserRouter
 import Team from "./components/pages/Team";
+import Dashboard from "./components/Dashboard";
+import Chat from "./components/Chat";
 
 function App() {
   return (
@@ -35,6 +37,8 @@ function App() {
             }
           />
           <Route path="/demo" element={<Demo />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/chat" element={<Chat />} />
           <Route
             path="/team"
             element={

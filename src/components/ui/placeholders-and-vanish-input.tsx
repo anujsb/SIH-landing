@@ -177,20 +177,20 @@ export function PlaceholdersAndVanishInput({
   return (
     <div
       className={cn(
-        "w-full relative max-w-xl mx-auto bg-[#393937] rounded-xl overflow-hidden shadow-[0px_4px_6px_-1px_rgba(0,0,0,0.1),_0px_1px_0px_0px_rgba(25,28,33,0.02),_0px_0px_0px_1px_rgba(25,28,33,0.08)] transition duration-200",
-        value && "bg-[#212120]"
+        "w-full relative max-w-xl mx-auto bg-[#212020] rounded-xl overflow-hidden shadow-[0px_4px_6px_-1px_rgba(0,0,0,0.1),_0px_1px_0px_0px_rgba(25,28,33,0.02),_0px_0px_0px_1px_rgba(25,28,33,0.08)] transition duration-200",
+        value && "bg-[#080808]"
       )}
     >
       <form
         className={cn(
-          "w-full relative max-w-xl mx-auto bg-[#393937] h-12 rounded-xl overflow-hidden transition duration-200",
-          value && "bg-[#212120]"
+          "w-full relative max-w-xl mx-auto bg-[#212120] h-12 rounded-xl overflow-hidden transition duration-200",
+          value && "bg-black"
         )}
         onSubmit={handleSubmit}
       >
         <canvas
           className={cn(
-            "absolute pointer-events-none  text-base transform scale-50 top-[20%] left-2 sm:left-8 origin-top-left filter invert dark:invert-0 pr-20",
+            "absolute pointer-events-none  text-base transform scale-50 top-[20%] left-2 sm:left-8 origin-top-left filter invert-0 pr-20",
             !animating ? "opacity-0" : "opacity-100"
           )}
           ref={canvasRef}
@@ -209,14 +209,14 @@ export function PlaceholdersAndVanishInput({
           type="text"
           className={cn(
             "w-full relative text-sm sm:text-base z-50 border-none text-white bg-transparent  h-full rounded-full focus:outline-none focus:ring-0 pl-4 sm:pl-10 pr-20",
-            animating && "text-transparent dark:text-transparent"
+            animating && "text-transparent"
           )}
         />
         <button
           aria-label="Submit"
           disabled={!value}
           type="submit"
-          className="absolute right-2 top-1/2 z-50 -translate-y-1/2 rounded-full bg-zinc-900 disabled:bg-zinc-800 transition duration-200"
+          className="absolute right-2 top-1/2 z-50 -translate-y-1/2 rounded-full my-1 bg-[#ae5530] disabled:bg-[#ae5630b1] transition duration-200"
         >
           <motion.svg
             xmlns="http://www.w3.org/2000/svg"
@@ -281,7 +281,7 @@ export function PlaceholdersAndVanishInput({
       </form>
       <div
         className={cn(
-          "w-full flex gap-4 items-start justify-start relative bg-[#393937] p-4 transition duration-200",
+          "w-full flex gap-4 items-start justify-start relative bg-[#393937] p-4 transition duration-200 mt-1",
           value && "bg-[#212120]"
         )}
       >

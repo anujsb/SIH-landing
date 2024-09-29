@@ -1,50 +1,49 @@
 import { useState } from "react";
 import { Sidebar, SidebarBody, SidebarLink } from "./ui/sidebar";
-// import {
-//   IconArrowLeft,
-//   IconBrandTabler,
-//   IconSettings,
-//   IconUserBolt,
-// } from "@tabler/icons-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom"; // Import useLocation
 import { motion } from "framer-motion";
-// import { cn } from "../lib/utils";
 import { logo } from "../assets";
-import { Dashboard } from "../assets";
+import { Dashboard, Search, Chat } from "../assets";
 
 export function SidebarDemo() {
   const links = [
     {
+      label: "Search",
+      href: "/demo",
+      icon: <img src={Search} alt="EACC.dev logo" className="h-7 w-7 mr-2 " />,
+    },
+    {
       label: "Dashboard",
-      href: "/demo",
-      icon: <img src={Dashboard} alt="EACC.dev logo" className="h-10 w-30 mr-2 " />,
+      href: "/dashboard",
+      icon: (
+        <img src={Dashboard} alt="EACC.dev logo" className="h-7 w-7 mr-2 " />
+      ),
     },
     {
-      label: "?",
-      href: "/demo",
-      icon: <img src={Dashboard} alt="EACC.dev logo" className="h-10 w-30 mr-2 " />,
+      label: "Chat",
+      href: "/chat",
+      icon: <img src={Chat} alt="EACC.dev logo" className="h-7 w-7 mr-2 " />,
     },
-    {
-      label: "??",
-      href: "/demo",
-      icon: <img src={Dashboard} alt="EACC.dev logo" className="h-10 w-30 mr-2 " />,
-    },
-    // {
-    //   label: "Logout",
-    //   href: "#",
-    //   icon: <IconArrowLeft className=" h-5 w-5 flex-shrink-0" />,
-    // },
   ];
+  
   const [open, setOpen] = useState(false);
+  const location = useLocation(); // Get the current location
+
   return (
     <div>
       <Sidebar open={open} setOpen={setOpen}>
-        <SidebarBody className="justify-between gap-10 bg-neutral-200 border-r border-neutral-500 shadow-2xl rounded-r-xl">
+        <SidebarBody className="justify-between gap-10 bg-white border-r border-[#aa9b93] shadow-2xl rounded-r-xl">
           <div className="flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
             {open ? <Logo /> : <LogoIcon />}
             <div className="mt-8 flex flex-col gap-2">
               {links.map((link, idx) => (
-                <SidebarLink key={idx} link={link} />
+                <SidebarLink
+                  key={idx}
+                  link={link}
+                  className={`${
+                    location.pathname === link.href ? "bg-[#fcf0eb] px-1 rounded-lg" : "bg-[#faf9f8] px-1  rounded-lg"
+                  }`} // Apply the active class if the current route matches
+                />
               ))}
             </div>
           </div>
@@ -75,7 +74,7 @@ export const Logo = () => {
   return (
     <Link
       to="#"
-      className="font-normal flex space-x-2 items-center text-sm  py-1 relative z-20"
+      className="font-normal flex space-x-2 items-center text-sm py-1 relative z-20"
     >
       <div className="h-5 w-6 rounded-br-lg rounded-tr-sm rounded-tl-lg rounded-bl-sm flex-shrink-0" />
       <motion.span

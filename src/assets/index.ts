@@ -9,6 +9,8 @@ import attach from "./attach.svg";
 import arrow from "./arrow.svg";
 import filter from "./filter.svg";
 import Dashboard from "./Dashboard.svg";
+import Search from "./Search.svg";
+import Chat from "./Chat.svg";
 
 export {
   ai,
@@ -22,4 +24,6 @@ export {
   arrow,
   filter,
   Dashboard,
+  Search,
+  Chat,
 };
