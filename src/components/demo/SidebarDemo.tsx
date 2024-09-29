@@ -10,28 +10,38 @@ export function SidebarDemo() {
     {
       label: "Search",
       href: "/demo",
-      icon: <img src={Search} alt="EACC.dev logo" className="h-7 w-7 mr-2 " />,
+      icon: <img src={Search} alt="Search logo" className="h-7 w-7 mr-2" />,
     },
     {
       label: "Dashboard",
       href: "/dashboard",
-      icon: (
-        <img src={Dashboard} alt="EACC.dev logo" className="h-7 w-7 mr-2 " />
-      ),
+      icon: <img src={Dashboard} alt="Dashboard logo" className="h-7 w-7 mr-2" />,
     },
     {
       label: "Chat",
       href: "/chat",
-      icon: <img src={Chat} alt="EACC.dev logo" className="h-7 w-7 mr-2 " />,
+      icon: <img src={Chat} alt="Chat logo" className="h-7 w-7 mr-2" />,
     },
   ];
-  
+
   const [open, setOpen] = useState(false);
   const location = useLocation(); // Get the current location
 
   return (
-    <div>
-      <Sidebar open={open} setOpen={setOpen}>
+    <div className="relative">
+      {/* Button to toggle the sidebar for mobile view */}
+      <button
+        className="absolute top-4 left-4 md:hidden z-30 bg-transparent dark:bg-transparent"
+        onClick={() => setOpen(!open)}
+      >
+        <div className="space-y-2">
+          <span className="block w-8 h-1 bg-black"></span>
+          <span className="block w-8 h-1 bg-black"></span>
+          <span className="block w-8 h-1 bg-black"></span>
+        </div>
+      </button>
+
+      <Sidebar open={open} setOpen={setOpen} className="md:w-64">
         <SidebarBody className="justify-between gap-10 bg-white border-r border-[#aa9b93] shadow-2xl rounded-r-xl">
           <div className="flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
             {open ? <Logo /> : <LogoIcon />}
@@ -41,7 +51,9 @@ export function SidebarDemo() {
                   key={idx}
                   link={link}
                   className={`${
-                    location.pathname === link.href ? "bg-[#fcf0eb] px-1 rounded-lg" : "bg-[#faf9f8] px-1  rounded-lg"
+                    location.pathname === link.href
+                      ? "bg-[#fcf0eb] px-1 rounded-lg"
+                      : "bg-[#faf9f8] px-1  rounded-lg"
                   }`} // Apply the active class if the current route matches
                 />
               ))}
@@ -50,7 +62,7 @@ export function SidebarDemo() {
           <div>
             <SidebarLink
               link={{
-                label: "nyay sutra",
+                label: "Nyay Sutra",
                 href: "#",
                 icon: (
                   <img
@@ -94,7 +106,7 @@ export const LogoIcon = () => {
       to="#"
       className="font-normal flex space-x-2 items-center text-sm py-1 relative z-20"
     >
-      <div className="h-5 w-6  rounded-br-lg rounded-tr-sm rounded-tl-lg rounded-bl-sm flex-shrink-0" />
+      <div className="h-5 w-6 rounded-br-lg rounded-tr-sm rounded-tl-lg rounded-bl-sm flex-shrink-0" />
     </Link>
   );
 };

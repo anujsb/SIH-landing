@@ -1,18 +1,13 @@
-// import Sidebar from "@/components/Sidebar";
 import { SidebarDemo } from "../demo/SidebarDemo";
-// import { cn } from "../lib/utils";
 import { BentoGrid, BentoGridItem } from "../ui/bento-grid";
 
 const Dashboard = () => {
-
-
   return (
-    <div className="bg-[#faf9f8] text-black flex md:flex-row  w-full min-h-screen">
-      {" "}
+    <div className="bg-[#faf9f8] text-black flex flex-col md:flex-row w-full min-h-screen">
       <SidebarDemo />
       <div className="flex flex-1 flex-col w-full">
-        <div className=" m-4 w-full">
-          <BentoGrid className="mt-10">
+        <div className="m-4 w-full">
+          <BentoGrid className="mt-10 grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
             {items.map((item, i) => (
               <BentoGridItem
                 key={i}
@@ -31,22 +26,10 @@ const Dashboard = () => {
 
 export default Dashboard;
 
-{
-  /* <div className="h-[40rem] flex flex-col justify-center  items-center px-4">
-      <h2 className="mb-10 sm:mb-20 text-xl text-center sm:text-5xl text-black">
-        Ask Aceternity UI Anything
-      </h2>
-      <PlaceholdersAndVanishInput
-        placeholders={placeholders}
-        onChange={handleChange}
-        onSubmit={onSubmit}
-      />
-    </div> */
-}
-
 const Skeleton = () => (
   <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 to-neutral-100 "></div>
 );
+
 const items = [
   {
     title: (
@@ -56,40 +39,26 @@ const items = [
     ),
     description: "description",
     header: <Skeleton />,
-    //   icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
   },
   {
     title: "Cases By Category",
     description: "description",
     header: <Skeleton />,
-    //   icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
   },
   {
     title: "Daily Cases",
     description: "Go to columns for details.",
     header: <Skeleton />,
-    //   icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
   },
   {
     title: "Summary",
     description: "description",
     header: <Skeleton />,
-    //   icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
+    className: "md:col-span-2",
   },
   {
     title: "Total Cases",
     description: "3,192",
     header: <Skeleton />,
-    //   icon: <IconArrowWaveRightUp className="h-4 w-4 text-neutral-500" />,
   },
-  // {
-  //   title: "??",
-  //   description: "description",
-  //   header: <Skeleton />,
-  // },
-  // {
-  //   title: "??",
-  //   description: "description",
-  //   header: <Skeleton />,
-  // },
 ];
