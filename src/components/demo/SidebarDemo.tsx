@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { Sidebar, SidebarBody, SidebarLink } from "./ui/sidebar";
+import { Sidebar, SidebarBody, SidebarLink } from "../ui/sidebar";
 import { Link, useLocation } from "react-router-dom"; // Import useLocation
 import { motion } from "framer-motion";
-import { logo } from "../assets";
-import { Dashboard, Search, Chat } from "../assets";
+import { logo } from "../../assets";
+import { Dashboard, Search, Chat } from "../../assets";
 
 export function SidebarDemo() {
   const links = [

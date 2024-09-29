@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { SidebarDemo } from "../SidebarDemo";
+import { SidebarDemo } from "../demo/SidebarDemo";
 import { useNavigate } from "react-router-dom";
 import { PlaceholdersAndVanishInput } from "../ui/placeholders-and-vanish-input";
 

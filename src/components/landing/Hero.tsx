@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { Link } from "react-router-dom";
-import { cn } from "../lib/utils";
-import { Button } from "./ui/button";
+import { cn } from "../../lib/utils";
+import { Button } from "../ui/button";
 const Hero = () => {
   return (
     <div>

@@ -1,7 +1,7 @@
 // import Sidebar from "@/components/Sidebar";
-import { SidebarDemo } from "./SidebarDemo";
+import { SidebarDemo } from "../demo/SidebarDemo";
 // import { cn } from "../lib/utils";
-import { BentoGrid, BentoGridItem } from "./ui/bento-grid";
+import { BentoGrid, BentoGridItem } from "../ui/bento-grid";
 
 const Dashboard = () => {
 
