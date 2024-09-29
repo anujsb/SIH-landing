@@ -41,7 +41,7 @@ export function SidebarDemo() {
         </div>
       </button>
 
-      <Sidebar open={open} setOpen={setOpen} className="md:w-64">
+      <Sidebar open={open} setOpen={setOpen}>
         <SidebarBody className="justify-between gap-10 bg-white border-r border-[#aa9b93] shadow-2xl rounded-r-xl">
           <div className="flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
             {open ? <Logo /> : <LogoIcon />}
