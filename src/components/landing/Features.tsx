@@ -1,12 +1,12 @@
 import React from "react";
 
-import smart from "../assets/Smart.svg";
-import Async from "../assets/Async.svg";
-import Question from "../assets/Question.svg";
-import Style from "../assets/Style.svg";
-import Customize from "../assets/Customize.svg";
-import Generate from "../assets/Generate.svg";
-import Versatile from "../assets/Versatile.svg";
+import smart from "../../assets/Smart.svg";
+import Async from "../../assets/Async.svg";
+import Question from "../../assets/Question.svg";
+import Style from "../../assets/Style.svg";
+import Customize from "../../assets/Customize.svg";
+import Generate from "../../assets/Generate.svg";
+import Versatile from "../../assets/Versatile.svg";
 
 // import { smart, Async, Question, Style, Customize, Generate, Versatile  } from "../assets";
 

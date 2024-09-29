@@ -1,5 +1,4 @@
-
-import { FloatingNav } from "./ui/floating-navbar";
+import { FloatingNav } from "../ui/floating-navbar";
 
 export function FloatingNavDemo() {
   const navItems = [

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { Button } from "./ui/button";
-import { logo, linkedin } from "../assets";
+import { Button } from "./../ui/button";
+import { logo, linkedin } from "../../assets";
 
 const Footer = () => {
   return (
