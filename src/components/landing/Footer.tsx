@@ -28,17 +28,17 @@ const Footer = () => {
             </p>
             <div className="flex justify-center lg:justify-start mt-5 space-x-2">
               <Link to="https://www.linkedin.com/in/anujbhuyar/">
-                <div className="p-2 bg-dark-grey-bg rounded-lg">
+                <div className="p-2 rounded-lg">
                   <img src={linkedin} width={25} height={25} alt="LinkedIn" />
                 </div>
               </Link>
               {/* <Link href="https://x.com/anujsbhuyar">
-                <div className="p-2 bg-dark-grey-bg rounded-lg">
+                <div className="p-2 rounded-lg">
                   <img src={x} width={25} height={25} alt="X" />
                 </div>
               </Link> */}
               {/* <Link href="#">
-              <div className="p-2 bg-dark-grey-bg rounded-lg">
+              <div className="p-2 rounded-lg">
                 <Image
                   src="/insta.svg"
                   width={25}

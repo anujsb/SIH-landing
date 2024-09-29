@@ -50,7 +50,7 @@ const Chat = () => {
                       <AlertDialogTrigger asChild>
                         <Button
                           variant="default"
-                          className="border rounded-lg border-[#9d662e] shadow-md border-dashed hover:border-solid hover:border-[#9d662e] hover:shadow-xl"
+                          className="border rounded-lg border-[#9d662e] dark:bg-white shadow-md border-dashed hover:border-solid hover:border-[#9d662e] hover:shadow-xl"
                         >
                           Section 73
                         </Button>
@@ -82,7 +82,7 @@ const Chat = () => {
                       <AlertDialogTrigger asChild>
                         <Button
                           variant="default"
-                          className="border rounded-lg border-[#9d662e] shadow-md border-dashed hover:border-solid hover:border-[#9d662e] hover:shadow-xl"
+                          className="border rounded-lg border-[#9d662e] dark:bg-white shadow-md border-dashed hover:border-solid hover:border-[#9d662e] hover:shadow-xl"
                         >
                           Section 74
                         </Button>
@@ -111,7 +111,7 @@ const Chat = () => {
                       <AlertDialogTrigger asChild>
                         <Button
                           variant="default"
-                          className="border rounded-lg border-[#9d662e] shadow-md border-dashed hover:border-solid hover:border-[#9d662e] hover:shadow-xl"
+                          className="border rounded-lg border-[#9d662e] dark:bg-white shadow-md border-dashed hover:border-solid hover:border-[#9d662e] hover:shadow-xl"
                         >
                           Section 10
                         </Button>
