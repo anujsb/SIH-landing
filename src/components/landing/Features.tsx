@@ -1,5 +1,5 @@
 import Versatile from "../../assets/Versatile.svg";
-import { logo } from "../../assets";
+// import { logo } from "../../assets";
 
 import { StickyScroll } from "../ui/sticky-scroll-reveal";
 
@@ -7,13 +7,14 @@ const content = [
   {
     content: (
       <div className="h-full w-full  flex items-center justify-center text-white">
-        <img
+        {/* <img
           src={logo}
           width={300}
           height={300}
           className="h-full w-full object-cover"
           alt="linear board demo"
-        />
+        /> */}
+        <h1 className="text-black">image1</h1>
       </div>
     ),
     title: "Automated Legal Research",
@@ -23,13 +24,14 @@ const content = [
   {
     content: (
       <div className="h-full w-full  flex items-center justify-center text-white">
-        <img
+        {/* <img
           src={logo}
           width={300}
           height={300}
           className="h-full w-full object-cover"
           alt="linear board demo"
-        />
+        /> */}
+        <h1 className="text-black">image2</h1>
       </div>
     ),
     title: "Predictive Case Outcomes",
@@ -39,13 +41,14 @@ const content = [
   {
     content: (
       <div className="h-full w-full  flex items-center justify-center text-white">
-        <img
+        {/* <img
           src={logo}
           width={300}
           height={300}
           className="h-full w-full object-cover"
           alt="linear board demo"
-        />
+        /> */}
+        <h1 className="text-black">image3</h1>
       </div>
     ),
     title: "Multilingual Support",
@@ -55,13 +58,14 @@ const content = [
   {
     content: (
       <div className="h-full w-full  flex items-center justify-center text-white">
-        <img
+        {/* <img
           src={logo}
           width={300}
           height={300}
           className="h-full w-full object-cover"
           alt="linear board demo"
-        />
+        /> */}
+        <h1 className="text-black">image4</h1>
       </div>
     ),
     title: "Customizable for Local Laws",
@@ -71,13 +75,14 @@ const content = [
   {
     content: (
       <div className="h-full w-full  flex items-center justify-center text-white">
-        <img
+        {/* <img
           src={logo}
           width={300}
           height={300}
           className="h-full w-full object-cover"
           alt="linear board demo"
-        />
+        /> */}
+        <h1 className="text-black">image5</h1>
       </div>
     ),
     title: "Data Security & Compliance",
@@ -87,13 +92,14 @@ const content = [
   {
     content: (
       <div className="h-full w-full  flex items-center justify-center text-white">
-        <img
+        {/* <img
           src={logo}
           width={300}
           height={300}
           className="h-full w-full object-cover"
           alt="linear board demo"
-        />
+        /> */}
+        <h1 className="text-black">image6</h1>
       </div>
     ),
     title: "User-Friendly Interface",

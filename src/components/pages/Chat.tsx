@@ -8,7 +8,6 @@ const Chat = () => {
   return (
     <div>
       <div className="bg-[#faf9f8] text-black flex md:flex-row  w-full min-h-screen">
-        {" "}
         <SidebarDemo />
         <div className="w-full mt-10">
           <div className="grid grid-flow-col grid-cols-4">
@@ -16,7 +15,6 @@ const Chat = () => {
               <div>
                 <WhatAsked />
                 <RelatedSections />
-
                 <Prediction />
               </div>
             </div>
